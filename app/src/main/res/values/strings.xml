@@ -11,4 +11,7 @@
     <string name="noticeCheckNoveltyTitle">О новинках и предложениях</string>
     <string name="scoresTitle">Баллы</string>
     <string name="save">Сохранить</string>
+
+    <string name="scores_values">%d/100</string>
+    <string name="save_message">Изменения сохранены</string>
 </resources>

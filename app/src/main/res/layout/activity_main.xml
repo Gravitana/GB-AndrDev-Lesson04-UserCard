@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -12,8 +11,8 @@
         android:id="@+id/avatar"
         android:layout_width="@dimen/avatar_size"
         android:layout_height="@dimen/avatar_size"
-        android:layout_marginTop="@dimen/default_margin"
         android:layout_marginHorizontal="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
         android:contentDescription="@string/avatar"
         android:scaleType="centerCrop"
         android:src="@drawable/avatar"
@@ -28,10 +27,11 @@
         style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/default_margin"
         android:layout_marginHorizontal="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
         android:hint="@string/name"
         app:boxStrokeWidth="3dp"
+        app:counterEnabled="true"
         app:endIconMode="clear_text"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,8 +39,10 @@
         app:layout_constraintTop_toBottomOf="@id/avatar">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -50,8 +52,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
         android:hint="@string/phone"
-        app:boxBackgroundColor="#BB86FC"
+        app:boxBackgroundColor="@color/phone_bg"
         app:endIconMode="clear_text"
         app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,8 +62,10 @@
         app:layout_constraintTop_toBottomOf="@id/name">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputPhone"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="phone" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -120,15 +125,15 @@
         app:layout_constraintTop_toBottomOf="@id/noticeSwitch">
 
         <com.google.android.material.checkbox.MaterialCheckBox
-            android:id="@+id/noticeCheckAutorize"
+            android:id="@+id/noticeCheck1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
+            android:checked="false"
             android:text="@string/noticeCheckAutorizeTitle"
             android:theme="@style/CheckBoxStyle" />
 
         <com.google.android.material.checkbox.MaterialCheckBox
-            android:id="@+id/noticeCheckNovelty"
+            android:id="@+id/noticeCheck2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checked="false"
@@ -191,6 +196,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/default_margin"
+        android:enabled="false"
         android:text="@string/save"
         android:theme="@style/DefaultText"
         app:layout_constraintEnd_toEndOf="parent"
