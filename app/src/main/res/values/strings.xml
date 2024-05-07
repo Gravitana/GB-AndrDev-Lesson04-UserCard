@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">GB-AndrDev-Lesson04-UserCard</string>
+    <string name="avatar">Фото</string>
+    <string name="name">Имя</string>
+    <string name="phone">Телефон</string>
+    <string name="genderM">М</string>
+    <string name="genderF">Ж</string>
+    <string name="gender">Пол</string>
+    <string name="noticeSwitchTitle">Получать уведомления</string>
+    <string name="noticeCheckAutorizeTitle">Об авторизации на устройстве</string>
+    <string name="noticeCheckNoveltyTitle">О новинках и предложениях</string>
+    <string name="scoresTitle">Баллы</string>
+    <string name="save">Сохранить</string>
+</resources>
